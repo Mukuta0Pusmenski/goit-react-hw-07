@@ -8,6 +8,7 @@ export default defineConfig({
       external: [
         'react-redux',
         '@reduxjs/toolkit',
+        'axios',
       ],
     },
   },
