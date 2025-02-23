@@ -9,6 +9,7 @@ export default defineConfig({
         'react-redux',
         '@reduxjs/toolkit',
         'axios',
+        'formik',
       ],
     },
   },
