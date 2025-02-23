@@ -10,6 +10,7 @@ export default defineConfig({
         '@reduxjs/toolkit',
         'axios',
         'formik',
+        'yup',
       ],
     },
   },
