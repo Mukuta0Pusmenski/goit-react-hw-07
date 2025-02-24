@@ -11,6 +11,7 @@ export default defineConfig({
         'axios',
         'formik',
         'yup',
+        'redux-persist/integration/react',
       ],
     },
   },
