@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from './redux/contactsOps';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import store, { persistor } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import ContactList from './components/ContactList/ContactList.jsx';
 import SearchBox from './components/SearchBox/SearchBox.jsx';
 import ContactForm from './components/ContactForm/ContactForm.jsx';
@@ -27,7 +28,9 @@ const App = () => {
 
 const AppWrapper = () => (
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
 
